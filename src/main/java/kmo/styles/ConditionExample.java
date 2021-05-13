@@ -9,13 +9,6 @@ public class ConditionExample {
 
     private static final Map<Month, String> SEASON_BY_MONTH = new EnumMap<>(Month.class);
 
-
-    public static void main(String[] args) {
-        System.out.println(getSeason1(Month.JANUARY));
-        System.out.println(getSeason2(Month.JANUARY));
-        System.out.println(getSeason3(Month.JANUARY));
-    }
-
     static {
         SEASON_BY_MONTH.put(Month.JANUARY, "SEASON1");
         SEASON_BY_MONTH.put(Month.FEBRUARY, "SEASON1");
@@ -29,6 +22,12 @@ public class ConditionExample {
         SEASON_BY_MONTH.put(Month.OCTOBER, "SEASON4");
         SEASON_BY_MONTH.put(Month.NOVEMBER, "SEASON4");
         SEASON_BY_MONTH.put(Month.DECEMBER, "SEASON4");
+    }
+
+    public static void main(String[] args) {
+        System.out.println(getSeason1(Month.JANUARY));
+        System.out.println(getSeason2(Month.JANUARY));
+        System.out.println(getSeason3(Month.JANUARY));
     }
 
     public static String getSeason1(final Month month) {
